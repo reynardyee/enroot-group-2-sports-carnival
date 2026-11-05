@@ -514,9 +514,9 @@ html.home-scroll-snap { scroll-snap-type: y mandatory; }
   .hero-countdown .countdown-unit-wrap { gap: 2px; }
   .hero-countdown .countdown-unit { min-width: 25px; }
   .hero-countdown .countdown-value { font-size: 18px; }
-  .reference-booth-grid { grid-template-columns: 1fr; }
+  .reference-booth-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .reference-game-card { display: flex; min-height: 0; flex-direction: column; gap: 0; padding: 10px; }
-  .reference-game-art { height: 150px; padding: 8px; }
+  .reference-game-art { height: clamp(88px, 30vw, 108px); padding: 7px; }
   .reference-game-copy { padding: 12px 2px 3px; }
 }
 
