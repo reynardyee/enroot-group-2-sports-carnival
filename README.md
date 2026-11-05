@@ -1,4 +1,4 @@
-# Sports Carnival 2026
+# Enroot Group 2 Sports Carnival
 
 A responsive, single-page event site built with React, Vite, and regular CSS. The homepage follows four supplied visual references and uses full-height scroll-snap panels: event hero, carnival message, game selection, and registration/prizes. It has no navigation bar or separate booth pages.
 
