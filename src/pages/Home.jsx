@@ -1,8 +1,16 @@
-import { ArrowDown, CalendarDays, Clock3, Gift, IdCard, MapPin, ShieldCheck, ClipboardCheck } from 'lucide-react';
+import { ArrowDown, CalendarDays, Clock3, Gift, IdCard, MapPin, ShieldCheck, ClipboardCheck, UsersRound } from 'lucide-react';
 import AnimatedNumberCountdown from '../components/ui/countdown-number.jsx';
 import { games } from '../data/games.js';
 
 const EVENT_START = new Date(2026, 10, 11, 14, 30);
+const CALENDAR_EVENT_URL = `https://calendar.google.com/calendar/render?${new URLSearchParams({
+  action: 'TEMPLATE',
+  text: 'Sports Carnival 2026',
+  dates: '20261111T143000/20261111T170000',
+  ctz: 'Asia/Singapore',
+  details: 'Free entry! Join us for an afternoon of games, fun and prizes. Open to everyone.',
+  location: 'Fifth Row Zone',
+})}`;
 
 export default function Home() {
   return (
@@ -19,8 +27,13 @@ export default function Home() {
               <span><Clock3 size={18}/> 2:30 PM – 5:00 PM</span>
               <span><MapPin size={18}/> FIFTH ROW ZONE</span>
             </div>
-            <p className="hero-audience">Freshmores · Year 3–4 · Graduate<br className="desktop-break"/> and Masters students</p>
-            <a className="hero-scroll-link" href="#story">Explore the carnival <ArrowDown size={17}/></a>
+            <p className="hero-audience"><UsersRound size={18} aria-hidden="true"/> Open To Everyone!</p>
+            <div className="hero-actions">
+              <a className="hero-calendar-link" href={CALENDAR_EVENT_URL} target="_blank" rel="noopener noreferrer">
+                <CalendarDays size={17}/> Add To Calendar!
+              </a>
+              <a className="hero-scroll-link" href="#story">Explore the carnival <ArrowDown size={17}/></a>
+            </div>
           </div>
           <div className="hero-panel-art" data-scroll-reveal="up">
             <img src="/images/sports-carnival-balls.png" alt="Colorful carnival balls with a free entry ticket" />
